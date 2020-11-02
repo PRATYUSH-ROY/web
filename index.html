@@ -1,0 +1,55 @@
+<html>
+
+<body style="text-align: center;">
+    <h1>Welcome To Students</h1>
+    <div style="margin: 50px; padding: 50px;">
+        <input style="width: 100%; height:40px;" id="1" type="text">
+        <br>
+        <br>
+        <input style="width: 100%; height:40px;" id="2" type="text">
+        <br>
+        <br>
+
+        <input style="width: 100%; height:40px;" id="3" type="text">
+        <br>
+        <br>
+
+        <input style="width: 100%; height:40px;" id="4" type="text">
+        <br>
+        <br>
+
+        <button id="butt" onclick="submit()">submit</button>
+        <br>
+        <br>
+        <label id="outpu"></label>
+    </div>
+    <script>
+        var butt = document.getElementById("butt");
+        var put = null;
+        var arr = []
+
+        function submit() {
+            if (butt.innerHTML == "submit") {
+                arr = [];
+                var mame1 = document.getElementById("1").value;
+                var mame2 = document.getElementById("2").value;
+                var mame3 = document.getElementById("1").value;
+                var mame4 = document.getElementById("4").value;
+                put = document.getElementById("outpu");
+                arr.push(mame1);
+                arr.push(mame2);
+                arr.push(mame3);
+                arr.push(mame4);
+
+                put.innerHTML = arr;
+                butt.innerHTML = "sort"
+            } else {
+                arr.sort();
+                butt.innerHTML = "submit"
+                put.innerHTML = arr;
+            }
+        }
+    </script>
+</body>
+
+</html>
